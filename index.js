@@ -10,7 +10,7 @@ const port = 8000 || process.env.PORT;
 app.use(express.json());
 app.use(
   cors({
-    origin: ["https://responsive-landing-page-tan.vercel.app"],
+    origin: "*",
     credentials: true,
   })
 );

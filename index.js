@@ -8,7 +8,12 @@ const app = express();
 const port = 8000 || process.env.PORT;
 
 app.use(express.json());
-app.use(cors());
+app.use(
+  cors({
+    origin: ["https://responsive-landing-page-tan.vercel.app"],
+    credentials: true,
+  })
+);
 
 app.use("/api/users", usersRoutes);
 
